@@ -7,7 +7,7 @@ attr_accessor :addresses #an array of string email addresses
 
 initialize(string)
 
-if string.include?(",")
+if string.include?(",") == true
 @addresses = string.split(",")
 else
 @addresses = string.split(" ")
