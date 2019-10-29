@@ -23,7 +23,12 @@ def parse
     @addresses = string_input.split(" ")
   end
 
-  @addresses.collect {|address| address.chomp}
-end
+  @addresses.collect do |address|
+    address.chomp
+    if address[0] == " "
+      address.shift
+    end #end of if block
+  end #end of collect block - returns @addresses array
+end #end of method
 
 end #end of class EmailAddressParser
