@@ -5,7 +5,7 @@
 class EmailAddressParser
 attr_accessor :addresses #an array of string email addresses
 
-initialize(string)
+def initialize(string)
 
 if string.include?(",") == true
   @addresses = string.split(",")
