@@ -24,10 +24,7 @@ def parse
   end
 
   @addresses.collect do |address|
-    address.chomp
-    if address[0] == " "
-      address[0].shift
-    end #end of if block
+    address.delete(" ")
   end #end of collect block - returns @addresses array
 end #end of method
 
