@@ -16,4 +16,14 @@ end
 @addresses.collect {|address| address.chomp}
 end # end of initialize
 
+def parse(string)
+  if string.include?(",") == true
+    @addresses = string.split(",")
+    else
+    @addresses = string.split(" ")
+  end
+
+  @addresses.collect {|address| address.chomp}
+end 
+
 end #end of class EmailAddressParser
