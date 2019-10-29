@@ -24,6 +24,6 @@ def parse(string)
   end
 
   @addresses.collect {|address| address.chomp}
-end 
+end
 
 end #end of class EmailAddressParser
