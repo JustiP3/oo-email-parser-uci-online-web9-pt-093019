@@ -12,7 +12,7 @@ array = string.split(",").chomp
 else
 array = string.split(" ").chomp
 end
-:addresses = array
+@addresses = array
 end # end of initialize
 
 end #end of class EmailAddressParser
