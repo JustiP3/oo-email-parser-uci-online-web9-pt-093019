@@ -23,9 +23,15 @@ def parse
     @addresses = string_input.split(" ")
   end
 
-  @addresses.collect do |address|
+  unique_array = []
+
+  @addresses.each do |address|
     address.delete(" ")
-  end #end of collect block - returns @addresses array
+    if unique_array.include?(address) == false
+      unique_array << address
+    end # end of if block
+  end #end of each block
+  unique_array
 end #end of method
 
 end #end of class EmailAddressParser
