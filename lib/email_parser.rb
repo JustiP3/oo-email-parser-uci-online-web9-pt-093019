@@ -6,17 +6,17 @@ class EmailAddressParser
 attr_accessor :addresses #an array of string email addresses
 
 def initialize(string)
+@addresses = string
 
-if string.include?(",") == true
-  @addresses = string.split(",")
-  else
-  @addresses = string.split(" ")
-end
-
-@addresses.collect {|address| address.chomp}
+#if string.include?(",") == true
+#  @addresses = string.split(",")
+#  else
+#  @addresses = string.split(" ")
+#end
+#@addresses.collect {|address| address.chomp}
 end # end of initialize
 
-def parse(string)
+def parse
   if string.include?(",") == true
     @addresses = string.split(",")
     else
