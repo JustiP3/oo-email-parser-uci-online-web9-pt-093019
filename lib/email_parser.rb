@@ -25,7 +25,7 @@ def parse
 
   @addresses.collect do |address|
     address.chomp
-    if address[0] == " "
+    if address[0][0] == " "
       address.shift
     end #end of if block
   end #end of collect block - returns @addresses array
