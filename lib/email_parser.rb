@@ -18,9 +18,9 @@ end # end of initialize
 
 def parse
   if string_input.include?(",") == true
-    @addresses = string.split(",")
+    @addresses = string_input.split(",")
     else
-    @addresses = string.split(" ")
+    @addresses = string_input.split(" ")
   end
 
   @addresses.collect {|address| address.chomp}
