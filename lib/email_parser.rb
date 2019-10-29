@@ -6,13 +6,13 @@ class EmailAddressParser
 attr_accessor :addresses #an array of string email addresses
 
 initialize(string)
-array = []
+
 if string.include?(",")
-array = string.split(",").chomp
+@addresses = string.split(",")
 else
-array = string.split(" ").chomp
+@addresses = string.split(" ")
 end
-@addresses = array
+@addresses.collect {|address| address.chomp}
 end # end of initialize
 
 end #end of class EmailAddressParser
