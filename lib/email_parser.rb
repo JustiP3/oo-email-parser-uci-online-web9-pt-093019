@@ -8,10 +8,11 @@ attr_accessor :addresses #an array of string email addresses
 initialize(string)
 
 if string.include?(",") == true
-@addresses = string.split(",")
-else
-@addresses = string.split(" ")
+  @addresses = string.split(",")
+  else
+  @addresses = string.split(" ")
 end
+
 @addresses.collect {|address| address.chomp}
 end # end of initialize
 
